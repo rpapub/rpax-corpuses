@@ -1,0 +1,26 @@
+# Ignore everything in c25* directories
+c25*
+
+# Un-ignore directories so git can traverse them
+!c25*/
+!c25*/**/
+
+# Ignore UiPath build artifacts and metadata
+c25*/.local/
+c25*/.settings/
+c25*/.tmh/
+c25*/.project/
+c25*/.objects/
+c25*/.entities/
+c25*/.templates/
+c25*/entry-points.json
+
+# Keep UiPath essentials - specific file types only
+!c25*/**/*.xaml
+!c25*/**/*.xlsx
+!c25*/**/*.cs
+!c25*/**/project.json
+!c25*/**/.gitkeep
+
+# Ignore temporary/backup files (starting with ~) - must come after allows
+c25*/**/~*
