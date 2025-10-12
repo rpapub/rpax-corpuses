@@ -13,7 +13,8 @@ c25*/.project/
 c25*/.objects/
 c25*/.entities/
 c25*/.templates/
-c25*/entry-points.json
+c25*/*.json
+c25*/*.uiproj
 
 # Keep UiPath essentials - specific file types only
 !c25*/**/*.xaml
