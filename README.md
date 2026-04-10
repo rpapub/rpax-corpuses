@@ -36,6 +36,7 @@ Example:
 | **STRS** | Stress tests                              | Measure performance and resilience under load                   |
 | **EXPL** | Exploratory / future                      | Experiments for upcoming features or schema changes             |
 | **DEMO** | Demonstration examples                    | Human-friendly samples for docs, screenshots, or videos         |
+| **VIOL** | Violation scenarios                       | Projects that intentionally violate specific analyzer rules; expected to **fail** — counterpart to CORE |
 
 ---
 

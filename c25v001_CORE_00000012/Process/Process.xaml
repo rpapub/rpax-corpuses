@@ -88,7 +88,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="@pipeline" DisplayName="Process" sap:VirtualizedContainerService.HintSize="673.3333333333333,1001.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="@pipeline&#xD;&#xA;@domain-model: c25v001_CORE_00000012.Process.MyDomainModel&#xD;&#xA;&#xD;&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="673.3333333333333,1048" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

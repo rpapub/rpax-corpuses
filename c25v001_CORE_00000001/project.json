@@ -34,12 +34,14 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
+      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
+    "modernBehavior": false,
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
