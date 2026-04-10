@@ -1,0 +1,7 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# VIOL project: expects exactly one CPMF violation.
+# Pipeline stages: Initialize, Enrich, Ingest, ... — Enrich before Ingest triggers CPMF-F002.
+expectedViolations:
+  - ruleId: CPMF-F002
+    severity: Error
+    workflow: Pipeline.xaml

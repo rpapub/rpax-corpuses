@@ -1,0 +1,3 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# CORE project: expects zero CPMF violations.
+expectedViolations: []

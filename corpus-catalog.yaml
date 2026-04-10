@@ -87,7 +87,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, core]
 
   - id: c26-core-0003
@@ -97,7 +97,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, core]
 
   - id: c26-core-0004
@@ -107,7 +107,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, core]
 
   - id: c26-core-0005
@@ -117,7 +117,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, core]
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -135,7 +135,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, L]
 
   # U — Workflow Structure
@@ -146,7 +146,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, U]
 
   - id: c26-viol-u002
@@ -156,7 +156,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, U]
 
   - id: c26-viol-u003
@@ -166,7 +166,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, U]
 
   - id: c26-viol-u004
@@ -176,7 +176,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, U]
 
   # N — Naming and Intent
@@ -187,7 +187,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, N]
 
   - id: c26-viol-n002
@@ -197,7 +197,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, N]
 
   - id: c26-viol-n003
@@ -207,7 +207,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, N]
 
   # F — Processing Flow
@@ -218,7 +218,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, F]
 
   - id: c26-viol-f002
@@ -228,7 +228,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, F]
 
   - id: c26-viol-f003
@@ -238,7 +238,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, F]
 
   - id: c26-viol-fc001
@@ -248,5 +248,5 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, viol, F, counter]

@@ -1,0 +1,7 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# VIOL project: expects exactly one CPMF violation.
+# "1BadName.xaml" starts with a digit — fails DotNetIdentifierValidator.
+expectedViolations:
+  - ruleId: CPMF-N002
+    severity: Error
+    workflow: 1BadName.xaml

@@ -1,0 +1,47 @@
+{
+    "name": "ModuleLibrary",
+    "description": "c26v001 CORE 00000002 — module library with pipeline",
+    "main": "Pipeline.xaml",
+    "dependencies": {
+        "UiPath.System.Activities": "[26.2.4]"
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "schemaVersion": "4.0",
+    "studioVersion": "26.0.190.0",
+    "projectVersion": "1.0.0",
+    "runtimeOptions": {
+        "autoDispose": false,
+        "isPausable": true,
+        "requiresUserInteraction": true,
+        "supportsPersistence": false,
+        "excludedLoggedData": [
+            "Private:*",
+            "*password*"
+        ],
+        "executionType": "Workflow"
+    },
+    "designOptions": {
+        "projectProfile": "Developement",
+        "outputType": "Process",
+        "libraryOptions": {
+            "includeOriginalXaml": false,
+            "privateWorkflows": []
+        },
+        "fileInfoCollection": []
+    },
+    "arguments": {
+        "input": [],
+        "output": []
+    },
+    "expressionLanguage": "VisualBasic",
+    "targetFramework": "Windows",
+    "entryPoints": [
+        {
+            "filePath": "Pipeline.xaml",
+            "uniqueId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "input": [],
+            "output": []
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# VIOL project: expects exactly one CPMF violation.
+expectedViolations:
+  - ruleId: CPMF-N001
+    severity: Warning
+    workflow: Pipeline.xaml
+    variable: BadVar

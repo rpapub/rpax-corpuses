@@ -1,0 +1,7 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# VIOL project: expects exactly one CPMF violation.
+# @pipeline annotation lacks @domain-model: line — triggers CPMF-F003.
+expectedViolations:
+  - ruleId: CPMF-F003
+    severity: Error
+    workflow: Pipeline.xaml

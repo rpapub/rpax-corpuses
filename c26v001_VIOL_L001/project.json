@@ -1,0 +1,47 @@
+{
+    "name": "ViolL001",
+    "description": "c26v001 VIOL L001 — CPMF-L001: missing log message bookends",
+    "main": "Pipeline.xaml",
+    "dependencies": {
+        "UiPath.System.Activities": "[26.2.4]"
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "schemaVersion": "4.0",
+    "studioVersion": "26.0.190.0",
+    "projectVersion": "1.0.0",
+    "runtimeOptions": {
+        "autoDispose": false,
+        "isPausable": true,
+        "requiresUserInteraction": true,
+        "supportsPersistence": false,
+        "excludedLoggedData": [
+            "Private:*",
+            "*password*"
+        ],
+        "executionType": "Workflow"
+    },
+    "designOptions": {
+        "projectProfile": "Developement",
+        "outputType": "Process",
+        "libraryOptions": {
+            "includeOriginalXaml": false,
+            "privateWorkflows": []
+        },
+        "fileInfoCollection": []
+    },
+    "arguments": {
+        "input": [],
+        "output": []
+    },
+    "expressionLanguage": "VisualBasic",
+    "targetFramework": "Windows",
+    "entryPoints": [
+        {
+            "filePath": "Pipeline.xaml",
+            "uniqueId": "e5f6a7b8-c9d0-1234-efab-567890123456",
+            "input": [],
+            "output": []
+        }
+    ]
+}
