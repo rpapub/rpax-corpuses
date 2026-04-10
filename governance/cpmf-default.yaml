@@ -1,0 +1,10 @@
+# governance/cpmf-default.yaml
+# Default governance file referenced by corpus-catalog.yaml (issue #42).
+#
+# V1: placeholder only — the corpus harness does not yet parse or apply this file.
+# Future: specify rule enablement overrides, severity adjustments, and
+# parameter defaults that apply across all test sets.
+#
+# Schema version: 0.1.0
+
+rules: []

@@ -1,0 +1,4 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# CORE project: expects zero violations.
+# Minimal @pipeline project with all required annotations and arguments.
+expectedViolations: []
