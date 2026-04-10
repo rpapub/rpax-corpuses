@@ -77,7 +77,7 @@ testSets:
     uipathTarget: net8
     expressionLanguage: VisualBasic
     expectedSource: sidecar
-    enabled: false
+    enabled: true
     tags: [cpmf, c26, core, smoke]
 
   - id: c26-core-0002
