@@ -1,0 +1,6 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# CORE project: expects zero violations.
+# Module.xaml has @module + @suppress:CPMF-L001 — empty sequence would normally
+# trigger CPMF-L001, but the suppress directive mutes it.
+# Exercises: AnnotationReader.IsSuppressed(), ScopedRule.FilteredInspect() Pass() path.
+expectedViolations: []

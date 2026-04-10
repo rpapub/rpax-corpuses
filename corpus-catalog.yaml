@@ -120,6 +120,26 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core]
 
+  - id: c26-core-0006
+    name: "c26v001_CORE_00000006 — @suppress:CPMF-L001 mutes log-bookends on a @module workflow"
+    corpus: ./c26v001_CORE_00000006
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, core, suppression]
+
+  - id: c26-core-0007
+    name: "c26v001_CORE_00000007 — @nocheck mutes all rules on a @module workflow"
+    corpus: ./c26v001_CORE_00000007
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, core, suppression]
+
   # ─────────────────────────────────────────────────────────────────────────────
   # c26v001 VIOL — rule-targeted violation projects
   # Each project is designed to trigger exactly one CPMF rule.
