@@ -13,8 +13,13 @@ c25*/.project/
 c25*/.objects/
 c25*/.entities/
 c25*/.templates/
-c25*/*.json
+c25*/.pack-output/
+c25*/**/*.json
 c25*/*.uiproj
+
+# Ignore rpax/rpacli tool output
+c25*/.rpax-warehouse/
+c25*/.rpacli-warehouse/
 
 # Keep UiPath essentials - specific file types only
 !c25*/**/*.xaml

@@ -1,0 +1,252 @@
+# corpus-catalog.yaml
+# Corpus catalog for the WatchfulAnvil test harness (issue #42).
+# Each test set binds a corpus project, a rule pack, a governance file, and an expected outcome source.
+# The harness reads this file to drive build → pack → analyze → evaluate runs.
+#
+# Schema: version 0.1.0
+# Governed by: https://github.com/rpapub/WatchfulAnvil (issue #42)
+
+version: "0.1.0"
+
+# Default governance file applied to all test sets unless overridden.
+# Path is relative to this catalog file.
+defaultGovernance: governance/cpmf-default.yaml
+
+# Version of the rule pack to inject into project.json before running uipcli.
+# "latest" = use the version produced by the most recent dotnet pack in the current run.
+defaultRulePackVersion: latest
+
+testSets:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # c25v001 — legacy representative corpus
+  # These projects were created before the c26 rule-targeted corpus.
+  # They contain a mix of violations; expected outcomes are defined in sidecar files.
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  - id: c25-core-0001
+    name: "c25v001_CORE_00000001 — minimal project, assorted violations"
+    corpus: ./c25v001_CORE_00000001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c25, smoke]
+
+  - id: c25-core-0010
+    name: "c25v001_CORE_00000010 — REFramework with flowcharts and variable naming issues"
+    corpus: ./c25v001_CORE_00000010
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c25]
+
+  - id: c25-core-0011
+    name: "c25v001_CORE_00000011 — annotated modules and unit tests"
+    corpus: ./c25v001_CORE_00000011
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c25]
+
+  - id: c25-core-0012
+    name: "c25v001_CORE_00000012 — coded workflows and domain model"
+    corpus: ./c25v001_CORE_00000012
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c25]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # c26v001 CORE — compliant baseline projects
+  # Each project is designed to produce zero CPMF violations.
+  # All disabled until projects are created in the corpus repo.
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  - id: c26-core-0001
+    name: "c26v001_CORE_00000001 — minimal pipeline, all rules passing"
+    corpus: ./c26v001_CORE_00000001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, core, smoke]
+
+  - id: c26-core-0002
+    name: "c26v001_CORE_00000002 — module library with pipeline"
+    corpus: ./c26v001_CORE_00000002
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, core]
+
+  - id: c26-core-0003
+    name: "c26v001_CORE_00000003 — pipeline with modules and unit tests"
+    corpus: ./c26v001_CORE_00000003
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, core]
+
+  - id: c26-core-0004
+    name: "c26v001_CORE_00000004 — pipeline with domain model"
+    corpus: ./c26v001_CORE_00000004
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, core]
+
+  - id: c26-core-0005
+    name: "c26v001_CORE_00000005 — invoke chain with in-sync arguments"
+    corpus: ./c26v001_CORE_00000005
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, core]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # c26v001 VIOL — rule-targeted violation projects
+  # Each project is designed to trigger exactly one CPMF rule.
+  # Naming: 1-char category code (from rules.yaml) + sequential number within that category.
+  # All disabled until projects are created in the corpus repo.
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  # L — Logging and Observability
+  - id: c26-viol-l001
+    name: "c26v001_VIOL_L001 — CPMF-L001: missing log message bookends"
+    corpus: ./c26v001_VIOL_L001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, L]
+
+  # U — Workflow Structure
+  - id: c26-viol-u001
+    name: "c26v001_VIOL_U001 — CPMF-U001: @unit missing out_Status argument"
+    corpus: ./c26v001_VIOL_U001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, U]
+
+  - id: c26-viol-u002
+    name: "c26v001_VIOL_U002 — CPMF-U002: @module/@pipeline missing CodedConfig argument"
+    corpus: ./c26v001_VIOL_U002
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, U]
+
+  - id: c26-viol-u003
+    name: "c26v001_VIOL_U003 — CPMF-U003: Flowchart activity present"
+    corpus: ./c26v001_VIOL_U003
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, U]
+
+  - id: c26-viol-u004
+    name: "c26v001_VIOL_U004 — CPMF-U004: stale InvokeWorkflowFile argument count"
+    corpus: ./c26v001_VIOL_U004
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, U]
+
+  # N — Naming and Intent
+  - id: c26-viol-n001
+    name: "c26v001_VIOL_N001 — CPMF-N001: variable names violate camelCase convention"
+    corpus: ./c26v001_VIOL_N001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, N]
+
+  - id: c26-viol-n002
+    name: "c26v001_VIOL_N002 — CPMF-N002: workflow filename not a valid .NET identifier"
+    corpus: ./c26v001_VIOL_N002
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, N]
+
+  - id: c26-viol-n003
+    name: "c26v001_VIOL_N003 — CPMF-N003: project name fails .NET identifier check"
+    corpus: ./c26v001_VIOL_N003
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, N]
+
+  # F — Processing Flow
+  - id: c26-viol-f001
+    name: "c26v001_VIOL_F001 — CPMF-F001: Assign directly to SpecificContent"
+    corpus: ./c26v001_VIOL_F001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, F]
+
+  - id: c26-viol-f002
+    name: "c26v001_VIOL_F002 — CPMF-F002: @pipeline wrong stage order"
+    corpus: ./c26v001_VIOL_F002
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, F]
+
+  - id: c26-viol-f003
+    name: "c26v001_VIOL_F003 — CPMF-F003: @pipeline missing or invalid @domain-model annotation"
+    corpus: ./c26v001_VIOL_F003
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, F]
+
+  - id: c26-viol-fc001
+    name: "c26v001_VIOL_FC001 — CPMF-FC001: no @pipeline workflow in project"
+    corpus: ./c26v001_VIOL_FC001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: false
+    tags: [cpmf, c26, viol, F, counter]
