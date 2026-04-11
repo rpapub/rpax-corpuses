@@ -1,3 +1,9 @@
 # expected.yaml — sidecar for corpus test harness (issue #42)
-# CORE project: minimal C# expression language project, expects zero violations.
-expectedViolations: []
+# CORE project: minimal C# expression language project.
+# CPMF-N003: corpus naming pattern uses hyphens, failing .NET identifier check (by design).
+# CPMF-FC001: no @pipeline workflow — single-workflow project.
+expectedViolations:
+  - ruleId: CPMF-N003
+    severity: Error
+  - ruleId: CPMF-FC001
+    severity: Error
