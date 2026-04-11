@@ -55,7 +55,7 @@ testSets:
     tags: [cpmf, c25]
 
   - id: c25-core-0012
-    name: "c25v001_CORE_00000012 — coded workflows and domain model"
+    name: "c25v001_CORE_00000012 — REFramework with named pipeline stages (Initialize → Finalize)"
     corpus: ./c25v001_CORE_00000012
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -139,6 +139,16 @@ testSets:
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core, suppression]
+
+  - id: c26-core-0008
+    name: "c26v001_CORE_00000008 — minimal C# expression language project"
+    corpus: ./c26v001_CORE_00000008
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: CSharp
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, core, csharp]
 
   # ─────────────────────────────────────────────────────────────────────────────
   # c26v001 VIOL — rule-targeted violation projects
@@ -264,6 +274,16 @@ testSets:
   - id: c26-viol-fc001
     name: "c26v001_VIOL_FC001 — CPMF-FC001: no @pipeline workflow in project"
     corpus: ./c26v001_VIOL_FC001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, viol, F, counter]
+
+  - id: c26-viol-fc002
+    name: "c26v001_VIOL_FC002 — CPMF-FC002: workflow type ratio below default thresholds"
+    corpus: ./c26v001_VIOL_FC002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic

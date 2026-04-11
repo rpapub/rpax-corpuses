@@ -3,4 +3,7 @@
 # Module.xaml has @module + @suppress:CPMF-L001 — empty sequence would normally
 # trigger CPMF-L001, but the suppress directive mutes it.
 # Exercises: AnnotationReader.IsSuppressed(), ScopedRule.FilteredInspect() Pass() path.
-expectedViolations: []
+expectedViolations:
+  - ruleId: CPMF-FC002
+    severity: Warning
+

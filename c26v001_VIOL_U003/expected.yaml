@@ -5,3 +5,5 @@ expectedViolations:
     severity: Error
     workflow: Pipeline.xaml
     activity: Decision Flowchart
+  - ruleId: CPMF-FC002
+    severity: Warning

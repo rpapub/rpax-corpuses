@@ -5,3 +5,5 @@ expectedViolations:
   - ruleId: CPMF-N002
     severity: Error
     workflow: 1BadName.xaml
+  - ruleId: CPMF-FC002
+    severity: Warning

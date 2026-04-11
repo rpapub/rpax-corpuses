@@ -4,3 +4,5 @@ expectedViolations:
   - ruleId: CPMF-U001
     severity: Error
     workflow: Unit.xaml
+  - ruleId: CPMF-FC002
+    severity: Warning

@@ -5,3 +5,5 @@ expectedViolations:
   - ruleId: CPMF-N003
     severity: Error
     scope: project
+  - ruleId: CPMF-FC002
+    severity: Warning

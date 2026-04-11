@@ -5,3 +5,5 @@ expectedViolations:
   - ruleId: CPMF-F003
     severity: Error
     workflow: Pipeline.xaml
+  - ruleId: CPMF-FC002
+    severity: Warning

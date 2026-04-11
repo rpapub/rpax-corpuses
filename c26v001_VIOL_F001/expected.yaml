@@ -6,3 +6,5 @@ expectedViolations:
     severity: Error
     workflow: Pipeline.xaml
     activity: Set Queue Item Data
+  - ruleId: CPMF-FC002
+    severity: Warning

@@ -6,3 +6,5 @@ expectedViolations:
     severity: Error
     workflow: Pipeline.xaml
     activity: Module - Invoke Workflow File
+  - ruleId: CPMF-FC002
+    severity: Warning

@@ -3,4 +3,7 @@
 # Module.xaml has @module + @nocheck — missing in_Config (CPMF-U002) and no log
 # bookends (CPMF-L001) would both fire, but @nocheck suppresses every rule.
 # Exercises: AnnotationReader.IsNoCheck(), ScopedRule.FilteredInspect() Pass() path.
-expectedViolations: []
+expectedViolations:
+  - ruleId: CPMF-FC002
+    severity: Warning
+

@@ -5,3 +5,5 @@ expectedViolations:
     severity: Warning
     workflow: Pipeline.xaml
     variable: BadVar
+  - ruleId: CPMF-FC002
+    severity: Warning
