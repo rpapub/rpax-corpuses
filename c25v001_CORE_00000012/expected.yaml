@@ -1,0 +1,17 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# c25 legacy project: REFramework with named pipeline stages, assorted violations.
+expectedViolations:
+  - ruleId: CPMF-N001
+    severity: Warning
+  - ruleId: CPMF-L001
+    severity: Warning
+  - ruleId: CPMF-U001
+    severity: Error
+  - ruleId: CPMF-U002
+    severity: Error
+  - ruleId: CPMF-U003
+    severity: Error
+  - ruleId: CPMF-N003
+    severity: Error
+  - ruleId: CPMF-FC002
+    severity: Warning

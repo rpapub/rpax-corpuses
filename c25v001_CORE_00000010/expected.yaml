@@ -1,0 +1,11 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# c25 legacy project: REFramework with flowcharts and variable naming issues.
+expectedViolations:
+  - ruleId: CPMF-N001
+    severity: Warning
+  - ruleId: CPMF-N003
+    severity: Error
+  - ruleId: CPMF-U003
+    severity: Error
+  - ruleId: CPMF-FC001
+    severity: Error

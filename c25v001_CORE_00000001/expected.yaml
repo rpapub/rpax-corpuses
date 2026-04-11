@@ -1,0 +1,11 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# c25 legacy project: assorted violations across naming, structure, and flow rules.
+expectedViolations:
+  - ruleId: CPMF-N001
+    severity: Warning
+  - ruleId: CPMF-N002
+    severity: Error
+  - ruleId: CPMF-N003
+    severity: Error
+  - ruleId: CPMF-FC001
+    severity: Error

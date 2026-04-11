@@ -1,0 +1,15 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# c25 legacy project: annotated modules and unit tests, missing CodedConfig and out_Status.
+expectedViolations:
+  - ruleId: CPMF-L001
+    severity: Warning
+  - ruleId: CPMF-U001
+    severity: Error
+  - ruleId: CPMF-U002
+    severity: Error
+  - ruleId: CPMF-N003
+    severity: Error
+  - ruleId: CPMF-FC001
+    severity: Error
+  - ruleId: CPMF-FC002
+    severity: Warning
