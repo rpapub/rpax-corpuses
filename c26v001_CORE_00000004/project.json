@@ -1,47 +1,48 @@
 {
-    "name": "PipelineWithDomainModel",
-    "description": "c26v001 CORE 00000004 — pipeline with domain model",
-    "main": "Pipeline.xaml",
-    "dependencies": {
-        "UiPath.System.Activities": "[26.2.4]"
+  "name": "PipelineWithDomainModel",
+  "description": "c26v001 CORE 00000004 — pipeline with domain model",
+  "main": "Pipeline.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[26.2.4]",
+    "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.190.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
     },
-    "webServices": [],
-    "entitiesStores": [],
-    "schemaVersion": "4.0",
-    "studioVersion": "26.0.190.0",
-    "projectVersion": "1.0.0",
-    "runtimeOptions": {
-        "autoDispose": false,
-        "isPausable": true,
-        "requiresUserInteraction": true,
-        "supportsPersistence": false,
-        "excludedLoggedData": [
-            "Private:*",
-            "*password*"
-        ],
-        "executionType": "Workflow"
-    },
-    "designOptions": {
-        "projectProfile": "Developement",
-        "outputType": "Process",
-        "libraryOptions": {
-            "includeOriginalXaml": false,
-            "privateWorkflows": []
-        },
-        "fileInfoCollection": []
-    },
-    "arguments": {
-        "input": [],
-        "output": []
-    },
-    "expressionLanguage": "VisualBasic",
-    "targetFramework": "Windows",
-    "entryPoints": [
-        {
-            "filePath": "Pipeline.xaml",
-            "uniqueId": "c3d4e5f6-a7b8-9012-cdef-345678901234",
-            "input": [],
-            "output": []
-        }
-    ]
+    "fileInfoCollection": []
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "targetFramework": "Windows",
+  "entryPoints": [
+    {
+      "filePath": "Pipeline.xaml",
+      "uniqueId": "c3d4e5f6-a7b8-9012-cdef-345678901234",
+      "input": [],
+      "output": []
+    }
+  ]
 }

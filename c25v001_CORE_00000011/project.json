@@ -5,7 +5,8 @@
   "main": "Annotations.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[25.4.4]",
-    "UiPath.UIAutomation.Activities": "[25.10.6]"
+    "UiPath.UIAutomation.Activities": "[25.10.6]",
+    "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
   },
   "webServices": [],
   "entitiesStores": [],

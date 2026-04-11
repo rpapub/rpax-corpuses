@@ -5,7 +5,8 @@
   "main": "myEntrypointOne.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[3.0.1]",
-    "UiPath.System.Activities": "[25.4.4]"
+    "UiPath.System.Activities": "[25.4.4]",
+    "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
   },
   "webServices": [],
   "entitiesStores": [],
