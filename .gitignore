@@ -1,32 +1,34 @@
-# Ignore everything in c25* directories
-c25*
+# Ignore everything in c2[5-9]* directories
+c2[5-9]*
 
 # Un-ignore directories so git can traverse them
-!c25*/
-!c25*/**/
+!c2[5-9]*/
+!c2[5-9]*/**/
 
 # Ignore UiPath build artifacts and metadata
-c25*/.local/
-c25*/.settings/
-c25*/.tmh/
-c25*/.project/
-c25*/.objects/
-c25*/.entities/
-c25*/.templates/
-c25*/.pack-output/
-c25*/**/*.json
-c25*/*.uiproj
+c2[5-9]*/.local/
+c2[5-9]*/.settings/
+c2[5-9]*/.tmh/
+c2[5-9]*/.project/
+c2[5-9]*/.objects/
+c2[5-9]*/.entities/
+c2[5-9]*/.templates/
+c2[5-9]*/.pack-output/
+c2[5-9]*/.dotnet/
+c2[5-9]*/**/*.json
+c2[5-9]*/*.uiproj
 
 # Ignore rpax/rpacli tool output
-c25*/.rpax-warehouse/
-c25*/.rpacli-warehouse/
+c2[5-9]*/.rpax-warehouse/
+c2[5-9]*/.rpacli-warehouse/
 
 # Keep UiPath essentials - specific file types only
-!c25*/**/*.xaml
-!c25*/**/*.xlsx
-!c25*/**/*.cs
-!c25*/**/project.json
-!c25*/**/.gitkeep
+!c2[5-9]*/**/*.xaml
+!c2[5-9]*/**/*.xaml.json
+!c2[5-9]*/**/*.xlsx
+!c2[5-9]*/**/*.cs
+!c2[5-9]*/**/project.json
+!c2[5-9]*/**/.gitkeep
 
 # Ignore temporary/backup files (starting with ~) - must come after allows
-c25*/**/~*
+c2[5-9]*/**/~*
