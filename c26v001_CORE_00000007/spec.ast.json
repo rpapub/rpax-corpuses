@@ -1,0 +1,220 @@
+{
+  "kind": "ProjectSpec",
+  "name": "CoreNocheck",
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Pipeline.xaml",
+      "required": true
+    }
+  ],
+  "annotations": [
+    {
+      "raw": "@pipeline",
+      "name": "pipeline",
+      "value": null,
+      "category": "classification",
+      "appliesTo": "workflow"
+    },
+    {
+      "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
+      "name": "domain-model",
+      "value": "CoreNocheck.Config.CodedConfig",
+      "category": "classification",
+      "appliesTo": "workflow"
+    }
+  ],
+  "workflows": [
+    {
+      "kind": "WorkflowSpec",
+      "path": "Pipeline.xaml",
+      "name": "Pipeline",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "Pipeline",
+        "required": true,
+        "matchMode": "strict",
+        "children": [
+          {
+            "kind": "Sequence",
+            "displayName": "Initialize",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Ingest",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Enrich",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Decide",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Execute",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Complete",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Finalize",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@pipeline",
+            "name": "pipeline",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          },
+          {
+            "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
+            "name": "domain-model",
+            "value": "CoreNocheck.Config.CodedConfig",
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "raw": "@pipeline",
+          "name": "pipeline",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        },
+        {
+          "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
+          "name": "domain-model",
+          "value": "CoreNocheck.Config.CodedConfig",
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ],
+      "arguments": [
+        {
+          "name": "in_TransactionItem",
+          "direction": "In",
+          "type": "UiPath.Core.QueueItem",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "CoreNocheck.Config.CodedConfig",
+          "required": false
+        }
+      ],
+      "constraints": [
+        {
+          "kind": "requireAnnotation",
+          "path": "annotations",
+          "target": "@pipeline",
+          "matchMode": "exact",
+          "message": "Pipeline workflows should be annotated @pipeline"
+        },
+        {
+          "kind": "requireRootKind",
+          "path": "root",
+          "target": "Sequence",
+          "matchMode": "exact",
+          "message": "Pipeline workflows must be rooted in a Sequence"
+        }
+      ]
+    },
+    {
+      "kind": "WorkflowSpec",
+      "path": "Module.xaml",
+      "name": "Module",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "Module",
+        "required": true,
+        "matchMode": "strict",
+        "children": [],
+        "annotations": [
+          {
+            "raw": "@module",
+            "name": "module",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          },
+          {
+            "raw": "@nocheck",
+            "name": "nocheck",
+            "value": null,
+            "category": "suppression",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "raw": "@module",
+          "name": "module",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        },
+        {
+          "raw": "@nocheck",
+          "name": "nocheck",
+          "value": null,
+          "category": "suppression",
+          "appliesTo": "workflow"
+        }
+      ],
+      "constraints": [
+        {
+          "kind": "requireAnnotation",
+          "path": "annotations",
+          "target": "@module",
+          "matchMode": "exact",
+          "message": "Module workflow should be annotated @module"
+        },
+        {
+          "kind": "requireAnnotation",
+          "path": "annotations",
+          "target": "@nocheck",
+          "matchMode": "exact",
+          "message": "Module workflow should carry @nocheck"
+        },
+        {
+          "kind": "forbidAnyRuleViolation",
+          "path": "root",
+          "target": "all",
+          "matchMode": "strict",
+          "message": "@nocheck suppresses all rules for this workflow"
+        }
+      ]
+    }
+  ]
+}

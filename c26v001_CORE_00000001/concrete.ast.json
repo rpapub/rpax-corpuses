@@ -1,0 +1,121 @@
+{
+  "kind": "Project",
+  "name": "MinimalPipeline",
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Pipeline.xaml",
+      "name": "Pipeline"
+    }
+  ],
+  "annotations": [
+    {
+      "raw": "@pipeline",
+      "name": "pipeline",
+      "value": null,
+      "category": "classification",
+      "appliesTo": "workflow"
+    },
+    {
+      "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+      "name": "domain-model",
+      "value": "MinimalPipeline.Config.CodedConfig",
+      "category": "classification",
+      "appliesTo": "workflow"
+    }
+  ],
+  "workflows": [
+    {
+      "kind": "Workflow",
+      "path": "Pipeline.xaml",
+      "name": "Pipeline",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "Pipeline",
+        "children": [
+          {
+            "kind": "Sequence",
+            "displayName": "Initialize",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Ingest",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Enrich",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Decide",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Execute",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Complete",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Finalize",
+            "children": []
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@pipeline",
+            "name": "pipeline",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          },
+          {
+            "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+            "name": "domain-model",
+            "value": "MinimalPipeline.Config.CodedConfig",
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "arguments": [
+        {
+          "name": "in_TransactionItem",
+          "direction": "In",
+          "type": "UiPath.Core.QueueItem",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "MinimalPipeline.Config.CodedConfig",
+          "required": false
+        }
+      ],
+      "annotations": [
+        {
+          "raw": "@pipeline",
+          "name": "pipeline",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        },
+        {
+          "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+          "name": "domain-model",
+          "value": "MinimalPipeline.Config.CodedConfig",
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ]
+    }
+  ]
+}

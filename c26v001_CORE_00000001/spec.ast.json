@@ -1,0 +1,153 @@
+{
+  "kind": "ProjectSpec",
+  "name": "MinimalPipeline",
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Pipeline.xaml",
+      "required": true
+    }
+  ],
+  "annotations": [
+    {
+      "raw": "@pipeline",
+      "name": "pipeline",
+      "value": null,
+      "category": "classification",
+      "appliesTo": "workflow"
+    },
+    {
+      "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+      "name": "domain-model",
+      "value": "MinimalPipeline.Config.CodedConfig",
+      "category": "classification",
+      "appliesTo": "workflow"
+    }
+  ],
+  "workflows": [
+    {
+      "kind": "WorkflowSpec",
+      "path": "Pipeline.xaml",
+      "name": "Pipeline",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "Pipeline",
+        "required": true,
+        "matchMode": "strict",
+        "children": [
+          {
+            "kind": "Sequence",
+            "displayName": "Initialize",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Ingest",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Enrich",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Decide",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Execute",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Complete",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "Finalize",
+            "required": true,
+            "matchMode": "strict",
+            "children": []
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@pipeline",
+            "name": "pipeline",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          },
+          {
+            "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+            "name": "domain-model",
+            "value": "MinimalPipeline.Config.CodedConfig",
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "raw": "@pipeline",
+          "name": "pipeline",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        },
+        {
+          "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
+          "name": "domain-model",
+          "value": "MinimalPipeline.Config.CodedConfig",
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ],
+      "arguments": [
+        {
+          "name": "in_TransactionItem",
+          "direction": "In",
+          "type": "UiPath.Core.QueueItem",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "MinimalPipeline.Config.CodedConfig",
+          "required": false
+        }
+      ],
+      "constraints": [
+        {
+          "kind": "requireAnnotation",
+          "path": "annotations",
+          "target": "@pipeline",
+          "matchMode": "exact",
+          "message": "Pipeline workflows should be annotated @pipeline"
+        },
+        {
+          "kind": "requireRootKind",
+          "path": "root",
+          "target": "Sequence",
+          "matchMode": "exact",
+          "message": "Pipeline workflows must be rooted in a Sequence"
+        }
+      ]
+    }
+  ]
+}

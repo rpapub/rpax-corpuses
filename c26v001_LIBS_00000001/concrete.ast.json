@@ -1,0 +1,327 @@
+{
+  "kind": "Project",
+  "name": "c26v001_LIBS_00000001",
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "GammaClient.xaml",
+      "name": "GammaClient"
+    }
+  ],
+  "annotations": [],
+  "workflows": [
+    {
+      "kind": "Workflow",
+      "path": "GammaImpl.xaml",
+      "name": "GammaImpl",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "GammaImpl",
+        "children": []
+      },
+      "arguments": [
+        {
+          "name": "in_RawRequest",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_CancellationToken",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_NormalizedRequest",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_InternalResult",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        }
+      ]
+    },
+    {
+      "kind": "Workflow",
+      "path": "GammaClient.xaml",
+      "name": "GammaClient",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "Main Sequence",
+        "children": [
+          {
+            "kind": "InvokeWorkflow",
+            "displayName": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+            "targetPath": "GammaImpl.xaml",
+            "arguments": [
+              {
+                "name": "in_RawRequest",
+                "kind": "argument"
+              },
+              {
+                "name": "in_Config",
+                "value": "[in_Config]",
+                "kind": "argument"
+              },
+              {
+                "name": "in_CancellationToken",
+                "value": "[in_CancellationToken]",
+                "kind": "argument"
+              },
+              {
+                "name": "out_NormalizedRequest",
+                "kind": "argument"
+              },
+              {
+                "name": "out_InternalResult",
+                "kind": "argument"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@public",
+            "name": "public",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "arguments": [
+        {
+          "name": "in_Request",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_CancellationToken",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_Response",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_Status",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        }
+      ],
+      "annotations": [
+        {
+          "raw": "@public",
+          "name": "public",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ]
+    },
+    {
+      "kind": "Workflow",
+      "path": "DemoGamma.xaml",
+      "name": "DemoGamma",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "DemoGamma",
+        "children": [
+          {
+            "kind": "InvokeWorkflow",
+            "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+            "targetPath": "GammaClient.xaml",
+            "arguments": [
+              {
+                "name": "in_Request",
+                "kind": "argument"
+              },
+              {
+                "name": "in_Config",
+                "kind": "argument"
+              },
+              {
+                "name": "in_CancellationToken",
+                "kind": "argument"
+              },
+              {
+                "name": "out_Response",
+                "kind": "argument"
+              },
+              {
+                "name": "out_Status",
+                "kind": "argument"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@example",
+            "name": "example",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "arguments": [
+        {
+          "name": "in_Request",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_Response",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_Status",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        }
+      ],
+      "annotations": [
+        {
+          "raw": "@example",
+          "name": "example",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ]
+    },
+    {
+      "kind": "Workflow",
+      "path": "TestCase_FakeGamma.xaml",
+      "name": "TestCase_FakeGamma",
+      "root": {
+        "kind": "Sequence",
+        "displayName": "TestCase_FakeGamma",
+        "children": [
+          {
+            "kind": "Sequence",
+            "displayName": "... Given",
+            "children": []
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "... When",
+            "children": [
+              {
+                "kind": "InvokeWorkflow",
+                "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                "targetPath": "GammaClient.xaml",
+                "arguments": [
+                  {
+                    "name": "in_Request",
+                    "kind": "argument"
+                  },
+                  {
+                    "name": "in_Config",
+                    "kind": "argument"
+                  },
+                  {
+                    "name": "in_CancellationToken",
+                    "kind": "argument"
+                  },
+                  {
+                    "name": "out_Response",
+                    "kind": "argument"
+                  },
+                  {
+                    "name": "out_Status",
+                    "value": "[out_Status]",
+                    "kind": "argument"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Sequence",
+            "displayName": "... Then",
+            "children": []
+          }
+        ],
+        "annotations": [
+          {
+            "raw": "@test",
+            "name": "test",
+            "value": null,
+            "category": "classification",
+            "appliesTo": "workflow"
+          }
+        ]
+      },
+      "arguments": [
+        {
+          "name": "in_TestInput",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "in_FakeBehavior",
+          "direction": "In",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_ObservedOutput",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        },
+        {
+          "name": "out_Status",
+          "direction": "Out",
+          "type": "System.String",
+          "required": false
+        }
+      ],
+      "annotations": [
+        {
+          "raw": "@test",
+          "name": "test",
+          "value": null,
+          "category": "classification",
+          "appliesTo": "workflow"
+        }
+      ]
+    }
+  ]
+}
