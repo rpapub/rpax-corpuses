@@ -5,23 +5,24 @@
   "entryPoints": [
     {
       "filePath": "Pipeline.xaml",
-      "required": true
+      "required": true,
+      "name": "Pipeline"
     }
   ],
   "annotations": [
     {
       "raw": "@pipeline",
-      "name": "pipeline",
       "value": null,
       "category": "classification",
-      "appliesTo": "workflow"
+      "appliesTo": "workflow",
+      "tag": "pipeline"
     },
     {
       "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
-      "name": "domain-model",
       "value": "MinimalPipeline.Config.CodedConfig",
       "category": "classification",
-      "appliesTo": "workflow"
+      "appliesTo": "workflow",
+      "tag": "domain-model"
     }
   ],
   "workflows": [
@@ -88,34 +89,34 @@
         "annotations": [
           {
             "raw": "@pipeline",
-            "name": "pipeline",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "pipeline"
           },
           {
             "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
-            "name": "domain-model",
             "value": "MinimalPipeline.Config.CodedConfig",
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "domain-model"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@pipeline",
-          "name": "pipeline",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "pipeline"
         },
         {
           "raw": "@domain-model: MinimalPipeline.Config.CodedConfig",
-          "name": "domain-model",
           "value": "MinimalPipeline.Config.CodedConfig",
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "domain-model"
         }
       ],
       "arguments": [
@@ -147,7 +148,26 @@
           "matchMode": "exact",
           "message": "Pipeline workflows must be rooted in a Sequence"
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@pipeline",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "pipeline"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "projectFile": "project.json",
+    "description": "c26v001 CORE 00000001 — minimal pipeline, all rules passing",
+    "projectVersion": "1.0.0",
+    "studioVersion": "26.0.190.0",
+    "targetFramework": "Windows",
+    "dependencies": {
+      "UiPath.System.Activities": "[26.2.4]",
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
+    },
+    "expectedFile": "expected.yaml"
+  }
 }

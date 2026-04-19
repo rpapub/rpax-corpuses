@@ -5,7 +5,8 @@
   "entryPoints": [
     {
       "filePath": "GammaClient.xaml",
-      "required": true
+      "required": true,
+      "name": "GammaClient"
     }
   ],
   "annotations": [],
@@ -97,20 +98,20 @@
         "annotations": [
           {
             "raw": "@public",
-            "name": "public",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "public"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@public",
-          "name": "public",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "public"
         }
       ],
       "arguments": [
@@ -160,7 +161,14 @@
           "matchMode": "exact",
           "message": "Client should invoke GammaImpl"
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@public",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "public"
+      }
     },
     {
       "kind": "WorkflowSpec",
@@ -203,20 +211,20 @@
         "annotations": [
           {
             "raw": "@example",
-            "name": "example",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "example"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@example",
-          "name": "example",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "example"
         }
       ],
       "arguments": [
@@ -244,7 +252,14 @@
           "type": "System.String",
           "required": false
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@example",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "example"
+      }
     },
     {
       "kind": "WorkflowSpec",
@@ -310,20 +325,20 @@
         "annotations": [
           {
             "raw": "@test",
-            "name": "test",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "test"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@test",
-          "name": "test",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "test"
         }
       ],
       "arguments": [
@@ -367,7 +382,26 @@
           "matchMode": "exact",
           "message": "Test case should invoke GammaClient in the When section"
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@test",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "test"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "projectFile": "project.json",
+    "description": "rpax corpus library",
+    "projectVersion": "0.0.1",
+    "studioVersion": "26.0.190.0",
+    "targetFramework": "Windows",
+    "dependencies": {
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]",
+      "UiPath.System.Activities": "[26.2.4]",
+      "UiPath.Testing.Activities": "[24.10.4]"
+    }
+  }
 }

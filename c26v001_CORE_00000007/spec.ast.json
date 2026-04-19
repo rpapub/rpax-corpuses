@@ -5,23 +5,24 @@
   "entryPoints": [
     {
       "filePath": "Pipeline.xaml",
-      "required": true
+      "required": true,
+      "name": "Pipeline"
     }
   ],
   "annotations": [
     {
       "raw": "@pipeline",
-      "name": "pipeline",
       "value": null,
       "category": "classification",
-      "appliesTo": "workflow"
+      "appliesTo": "workflow",
+      "tag": "pipeline"
     },
     {
       "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-      "name": "domain-model",
       "value": "CoreNocheck.Config.CodedConfig",
       "category": "classification",
-      "appliesTo": "workflow"
+      "appliesTo": "workflow",
+      "tag": "domain-model"
     }
   ],
   "workflows": [
@@ -88,34 +89,34 @@
         "annotations": [
           {
             "raw": "@pipeline",
-            "name": "pipeline",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "pipeline"
           },
           {
             "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-            "name": "domain-model",
             "value": "CoreNocheck.Config.CodedConfig",
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "domain-model"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@pipeline",
-          "name": "pipeline",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "pipeline"
         },
         {
           "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-          "name": "domain-model",
           "value": "CoreNocheck.Config.CodedConfig",
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "domain-model"
         }
       ],
       "arguments": [
@@ -147,7 +148,14 @@
           "matchMode": "exact",
           "message": "Pipeline workflows must be rooted in a Sequence"
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@pipeline",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "pipeline"
+      }
     },
     {
       "kind": "WorkflowSpec",
@@ -162,34 +170,34 @@
         "annotations": [
           {
             "raw": "@module",
-            "name": "module",
             "value": null,
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "module"
           },
           {
             "raw": "@nocheck",
-            "name": "nocheck",
             "value": null,
             "category": "suppression",
-            "appliesTo": "workflow"
+            "appliesTo": "workflow",
+            "tag": "nocheck"
           }
         ]
       },
       "annotations": [
         {
           "raw": "@module",
-          "name": "module",
           "value": null,
           "category": "classification",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "module"
         },
         {
           "raw": "@nocheck",
-          "name": "nocheck",
           "value": null,
           "category": "suppression",
-          "appliesTo": "workflow"
+          "appliesTo": "workflow",
+          "tag": "nocheck"
         }
       ],
       "constraints": [
@@ -214,7 +222,26 @@
           "matchMode": "strict",
           "message": "@nocheck suppresses all rules for this workflow"
         }
-      ]
+      ],
+      "rootAnnotation": {
+        "raw": "@module",
+        "value": null,
+        "category": "classification",
+        "appliesTo": "workflow",
+        "tag": "module"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "projectFile": "project.json",
+    "description": "c26v001 CORE 00000007 — @nocheck on a @module workflow; exercises AnnotationReader.IsNoCheck",
+    "projectVersion": "1.0.0",
+    "studioVersion": "26.0.190.0",
+    "targetFramework": "Windows",
+    "dependencies": {
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]",
+      "UiPath.System.Activities": "[26.2.4]"
+    },
+    "expectedFile": "expected.yaml"
+  }
 }
