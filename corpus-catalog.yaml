@@ -356,3 +356,31 @@ testSets:
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, libs]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # c26v002 — coded activities and library consumer
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  - id: c26v002_LIBS_00000001
+    name: "codedActivity"
+    description: "Library with coded activity"
+    corpus: ./c26v002_LIBS_00000001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    outputType: Library
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26v002, libs]
+
+  - id: c26v002_CORE_00000001
+    name: "libraryConsumer"
+    description: "Process that consumes a library"
+    corpus: ./c26v002_CORE_00000001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    outputType: Process
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26v002, core]
