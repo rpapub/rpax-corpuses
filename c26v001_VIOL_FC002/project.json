@@ -1,6 +1,6 @@
 {
-  "name": "ViolF003",
-  "description": "c26v001 VIOL F003 — CPMF-F003: @pipeline missing or invalid @domain-model annotation",
+  "name": "ViolFc002",
+  "description": "c26v001 VIOL FC002 — CPMF-FC002: workflow type ratio below default thresholds",
   "main": "Pipeline.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[26.2.4]",
@@ -40,7 +40,7 @@
   "entryPoints": [
     {
       "filePath": "Pipeline.xaml",
-      "uniqueId": "c5d6e7f8-a9b0-1234-cdef-567890123456",
+      "uniqueId": "fc002000-0000-0000-0000-000000000001",
       "input": [],
       "output": []
     }

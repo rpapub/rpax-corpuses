@@ -15,6 +15,7 @@ c2[5-9]*/.entities/
 c2[5-9]*/.templates/
 c2[5-9]*/.pack-output/
 c2[5-9]*/.dotnet/
+c2[5-9]*/.codedworkflows/
 c2[5-9]*/**/*.json
 c2[5-9]*/*.uiproj
 
@@ -32,3 +33,6 @@ c2[5-9]*/.rpacli-warehouse/
 
 # Ignore temporary/backup files (starting with ~) - must come after allows
 c2[5-9]*/**/~*
+
+# Ignore UiPath Studio generated TODO reports
+c2[5-9]*/**/Todo.md

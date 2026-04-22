@@ -1,0 +1,162 @@
+{
+  "kind": "Project",
+  "name": "RpaxCorpus",
+  "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\tpl-windows-VB\\project.json",
+  "description": "rpax corpus process",
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.190.0",
+  "expressionLanguage": "VisualBasic",
+  "targetFramework": "Windows",
+  "projectVersion": "1.0.0",
+  "outputType": "Process",
+  "main": "Main.xaml",
+  "dependencies": [
+    {
+      "name": "Cpmf.WorkflowAnalyzerRules",
+      "version": "0.1.13-alpha",
+      "rawVersion": "[0.1.13-alpha]"
+    },
+    {
+      "name": "UiPath.System.Activities",
+      "version": "26.2.4",
+      "rawVersion": "[26.2.4]"
+    }
+  ],
+  "projectArguments": [],
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "input": [],
+      "output": []
+    }
+  ],
+  "workflows": [
+    {
+      "kind": "Workflow",
+      "path": "Main.xaml",
+      "name": "Main",
+      "displayName": "Main Sequence",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\tpl-windows-VB\\project.json",
+      "relativePath": "Main.xaml",
+      "isEntryPoint": true,
+      "parseStatus": "parsed",
+      "annotations": [],
+      "arguments": [],
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "Main Sequence",
+        "attributes": {
+          "DisplayName": "Main Sequence"
+        },
+        "annotations": [],
+        "children": [],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "Main Sequence",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "Main Sequence",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
+        }
+      },
+      "invokes": [],
+      "metadata": {
+        "fileName": "Main.xaml",
+        "relativePath": "Main.xaml"
+      }
+    }
+  ],
+  "parseWarnings": [],
+  "parseErrors": [],
+  "raw": {
+    "name": "RpaxCorpus",
+    "description": "rpax corpus process",
+    "main": "Main.xaml",
+    "dependencies": {
+      "UiPath.System.Activities": "[26.2.4]",
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "schemaVersion": "4.0",
+    "studioVersion": "26.0.190.0",
+    "projectVersion": "1.0.0",
+    "runtimeOptions": {
+      "autoDispose": false,
+      "isPausable": true,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Process",
+      "libraryOptions": {
+        "includeOriginalXaml": false,
+        "privateWorkflows": []
+      },
+      "fileInfoCollection": []
+    },
+    "arguments": {
+      "input": [],
+      "output": []
+    },
+    "expressionLanguage": "VisualBasic",
+    "targetFramework": "Windows",
+    "entryPoints": [
+      {
+        "filePath": "Main.xaml",
+        "uniqueId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "input": [],
+        "output": []
+      }
+    ]
+  },
+  "metadata": {
+    "runtimeOptions": {
+      "autoDispose": false,
+      "isPausable": true,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Process",
+      "libraryOptions": {
+        "includeOriginalXaml": false,
+        "privateWorkflows": []
+      },
+      "fileInfoCollection": []
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "templateProjectData": {},
+    "publishData": {}
+  }
+}

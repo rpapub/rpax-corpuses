@@ -1,42 +1,52 @@
 {
   "name": "CoreNocheck",
+  "projectId": "1a2c5e4c-706b-4ae4-903f-980773ebccdb",
   "description": "c26v001 CORE 00000007 — @nocheck on a @module workflow; exercises AnnotationReader.IsNoCheck",
   "main": "Pipeline.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[26.2.4]",
-    "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
+    "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]",
+    "UiPath.System.Activities": "[26.2.4]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "26.0.190.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "0.0.1",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
   },
   "arguments": {
     "input": [],
     "output": []
   },
   "expressionLanguage": "VisualBasic",
-  "targetFramework": "Windows",
   "entryPoints": [
     {
       "filePath": "Pipeline.xaml",
@@ -44,5 +54,9 @@
       "input": [],
       "output": []
     }
-  ]
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
 }

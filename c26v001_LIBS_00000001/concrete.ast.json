@@ -1,327 +1,971 @@
 {
   "kind": "Project",
   "name": "c26v001_LIBS_00000001",
+  "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+  "projectId": "63341674-eda6-4c9a-8dc9-dd79ab9c28a0",
+  "description": "rpax corpus library",
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.190.0",
   "expressionLanguage": "VisualBasic",
+  "targetFramework": "Windows",
+  "projectVersion": "0.0.1",
+  "outputType": "Library",
+  "isTemplate": false,
+  "main": "Main.xaml",
+  "dependencies": [
+    {
+      "name": "Cpmf.WorkflowAnalyzerRules",
+      "version": "0.1.13-alpha",
+      "rawVersion": "[0.1.13-alpha]"
+    },
+    {
+      "name": "UiPath.System.Activities",
+      "version": "26.2.4",
+      "rawVersion": "[26.2.4]"
+    },
+    {
+      "name": "UiPath.Testing.Activities",
+      "version": "24.10.4",
+      "rawVersion": "[24.10.4]"
+    }
+  ],
+  "projectArguments": [],
   "entryPoints": [
     {
       "filePath": "GammaClient.xaml",
-      "name": "GammaClient"
+      "uniqueId": "ec9caf56-4057-4218-a2a0-d0e25bd81069",
+      "input": [],
+      "output": []
     }
   ],
-  "annotations": [],
   "workflows": [
     {
       "kind": "Workflow",
-      "path": "GammaImpl.xaml",
-      "name": "GammaImpl",
-      "root": {
-        "kind": "Sequence",
-        "displayName": "GammaImpl",
-        "children": []
-      },
+      "path": "DemoGamma.xaml",
+      "name": "DemoGamma",
+      "displayName": "DemoGamma",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+      "relativePath": "DemoGamma.xaml",
+      "isEntryPoint": false,
+      "parseStatus": "parsed",
+      "annotations": [],
       "arguments": [
         {
-          "name": "in_RawRequest",
+          "name": "in_Request",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "in_Config",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
-          "name": "in_CancellationToken",
-          "direction": "In",
-          "type": "System.String",
-          "required": false
-        },
-        {
-          "name": "out_NormalizedRequest",
+          "name": "out_Response",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
-          "name": "out_InternalResult",
+          "name": "out_Status",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         }
-      ]
+      ],
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "DemoGamma",
+        "attributes": {
+          "DisplayName": "DemoGamma"
+        },
+        "annotations": [
+          {
+            "raw": "@example",
+            "tag": "example",
+            "category": "classification",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@example",
+              "tag": "example",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
+          }
+        ],
+        "children": [
+          {
+            "kind": "Activity",
+            "activityType": "InvokeWorkflowFile",
+            "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+            "attributes": {
+              "ArgumentsVariable": "{x:Null}",
+              "DisplayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+              "UnSafe": "False",
+              "WorkflowFileName": "GammaClient.xaml"
+            },
+            "annotations": [],
+            "children": [
+              {
+                "kind": "Activity",
+                "activityType": "InvokeWorkflowFile.Arguments",
+                "attributes": {},
+                "annotations": [],
+                "children": [],
+                "invokeArguments": {},
+                "arguments": [],
+                "metadata": {
+                  "sourceTag": "InvokeWorkflowFile.Arguments"
+                }
+              }
+            ],
+            "invokeTarget": "GammaClient.xaml",
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "ArgumentsVariable",
+                "value": "{x:Null}",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "{x:Null}",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "DisplayName",
+                "value": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "UnSafe",
+                "value": "False",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "False",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "WorkflowFileName",
+                "value": "GammaClient.xaml",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "GammaClient.xaml",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "InvokeWorkflowFile"
+            }
+          }
+        ],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "DemoGamma",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "DemoGamma",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
+        }
+      },
+      "invokes": [
+        {
+          "kind": "static",
+          "targetPath": "GammaClient.xaml",
+          "resolvedPath": "GammaClient.xaml",
+          "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+          "arguments": {},
+          "isResolved": true,
+          "isEntryPoint": true
+        }
+      ],
+      "metadata": {
+        "fileName": "DemoGamma.xaml",
+        "relativePath": "DemoGamma.xaml"
+      }
     },
     {
       "kind": "Workflow",
       "path": "GammaClient.xaml",
       "name": "GammaClient",
-      "root": {
-        "kind": "Sequence",
-        "displayName": "Main Sequence",
-        "children": [
-          {
-            "kind": "InvokeWorkflow",
-            "displayName": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
-            "targetPath": "GammaImpl.xaml",
-            "arguments": [
-              {
-                "name": "in_RawRequest",
-                "kind": "argument"
-              },
-              {
-                "name": "in_Config",
-                "value": "[in_Config]",
-                "kind": "argument"
-              },
-              {
-                "name": "in_CancellationToken",
-                "value": "[in_CancellationToken]",
-                "kind": "argument"
-              },
-              {
-                "name": "out_NormalizedRequest",
-                "kind": "argument"
-              },
-              {
-                "name": "out_InternalResult",
-                "kind": "argument"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "raw": "@public",
-            "name": "public",
-            "value": null,
-            "category": "classification",
-            "appliesTo": "workflow"
-          }
-        ]
-      },
+      "displayName": "Main Sequence",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+      "relativePath": "GammaClient.xaml",
+      "isEntryPoint": true,
+      "parseStatus": "parsed",
+      "annotations": [],
       "arguments": [
         {
           "name": "in_Request",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "in_Config",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "in_CancellationToken",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_Response",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_Status",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         }
       ],
-      "annotations": [
-        {
-          "raw": "@public",
-          "name": "public",
-          "value": null,
-          "category": "classification",
-          "appliesTo": "workflow"
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "Main Sequence",
+        "attributes": {
+          "DisplayName": "Main Sequence"
+        },
+        "annotations": [
+          {
+            "raw": "@public",
+            "tag": "public",
+            "category": "classification",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@public",
+              "tag": "public",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
+          }
+        ],
+        "children": [
+          {
+            "kind": "Activity",
+            "activityType": "InvokeWorkflowFile",
+            "displayName": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+            "attributes": {
+              "ArgumentsVariable": "{x:Null}",
+              "DisplayName": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+              "UnSafe": "False",
+              "WorkflowFileName": "GammaImpl.xaml"
+            },
+            "annotations": [],
+            "children": [
+              {
+                "kind": "Activity",
+                "activityType": "InvokeWorkflowFile.Arguments",
+                "attributes": {},
+                "annotations": [],
+                "children": [],
+                "invokeArguments": {},
+                "arguments": [],
+                "metadata": {
+                  "sourceTag": "InvokeWorkflowFile.Arguments"
+                }
+              }
+            ],
+            "invokeTarget": "GammaImpl.xaml",
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "ArgumentsVariable",
+                "value": "{x:Null}",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "{x:Null}",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "DisplayName",
+                "value": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "UnSafe",
+                "value": "False",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "False",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              },
+              {
+                "name": "WorkflowFileName",
+                "value": "GammaImpl.xaml",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "GammaImpl.xaml",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "InvokeWorkflowFile"
+            }
+          }
+        ],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "Main Sequence",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "Main Sequence",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
         }
-      ]
+      },
+      "invokes": [
+        {
+          "kind": "static",
+          "targetPath": "GammaImpl.xaml",
+          "resolvedPath": "GammaImpl.xaml",
+          "displayName": "GammaImpl - Invoke Workflow File (GammaImpl.xaml)",
+          "arguments": {},
+          "isResolved": true,
+          "isEntryPoint": true
+        }
+      ],
+      "metadata": {
+        "fileName": "GammaClient.xaml",
+        "relativePath": "GammaClient.xaml"
+      }
     },
     {
       "kind": "Workflow",
-      "path": "DemoGamma.xaml",
-      "name": "DemoGamma",
-      "root": {
-        "kind": "Sequence",
-        "displayName": "DemoGamma",
-        "children": [
-          {
-            "kind": "InvokeWorkflow",
-            "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
-            "targetPath": "GammaClient.xaml",
-            "arguments": [
-              {
-                "name": "in_Request",
-                "kind": "argument"
-              },
-              {
-                "name": "in_Config",
-                "kind": "argument"
-              },
-              {
-                "name": "in_CancellationToken",
-                "kind": "argument"
-              },
-              {
-                "name": "out_Response",
-                "kind": "argument"
-              },
-              {
-                "name": "out_Status",
-                "kind": "argument"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "raw": "@example",
-            "name": "example",
-            "value": null,
-            "category": "classification",
-            "appliesTo": "workflow"
-          }
-        ]
-      },
+      "path": "GammaImpl.xaml",
+      "name": "GammaImpl",
+      "displayName": "GammaImpl",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+      "relativePath": "GammaImpl.xaml",
+      "isEntryPoint": false,
+      "parseStatus": "parsed",
+      "annotations": [],
       "arguments": [
         {
-          "name": "in_Request",
+          "name": "in_RawRequest",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "in_Config",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
+        },
+        {
+          "name": "in_CancellationToken",
+          "direction": "In",
+          "type": "x:String",
+          "annotations": []
+        },
+        {
+          "name": "out_NormalizedRequest",
+          "direction": "Out",
+          "type": "x:String",
+          "annotations": []
+        },
+        {
+          "name": "out_InternalResult",
+          "direction": "Out",
+          "type": "x:String",
+          "annotations": []
+        }
+      ],
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "GammaImpl",
+        "attributes": {
+          "DisplayName": "GammaImpl"
+        },
+        "annotations": [],
+        "children": [],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "GammaImpl",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "GammaImpl",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
+        }
+      },
+      "invokes": [],
+      "metadata": {
+        "fileName": "GammaImpl.xaml",
+        "relativePath": "GammaImpl.xaml"
+      }
+    },
+    {
+      "kind": "Workflow",
+      "path": "IGammaClient.xaml",
+      "name": "IGammaClient",
+      "displayName": "IGammaClient",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+      "relativePath": "IGammaClient.xaml",
+      "isEntryPoint": false,
+      "parseStatus": "parsed",
+      "annotations": [],
+      "arguments": [
+        {
+          "name": "in_Request",
+          "direction": "In",
+          "type": "x:String",
+          "annotations": []
+        },
+        {
+          "name": "in_Config",
+          "direction": "In",
+          "type": "x:String",
+          "annotations": []
+        },
+        {
+          "name": "in_CancellationToken",
+          "direction": "In",
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_Response",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_Status",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         }
       ],
-      "annotations": [
-        {
-          "raw": "@example",
-          "name": "example",
-          "value": null,
-          "category": "classification",
-          "appliesTo": "workflow"
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "IGammaClient",
+        "attributes": {
+          "DisplayName": "IGammaClient"
+        },
+        "annotations": [
+          {
+            "raw": "@interface",
+            "tag": "interface",
+            "category": "classification",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@interface",
+              "tag": "interface",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
+          }
+        ],
+        "children": [],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "IGammaClient",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "IGammaClient",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
         }
-      ]
+      },
+      "invokes": [],
+      "metadata": {
+        "fileName": "IGammaClient.xaml",
+        "relativePath": "IGammaClient.xaml"
+      }
     },
     {
       "kind": "Workflow",
       "path": "TestCase_FakeGamma.xaml",
       "name": "TestCase_FakeGamma",
-      "root": {
-        "kind": "Sequence",
-        "displayName": "TestCase_FakeGamma",
-        "children": [
-          {
-            "kind": "Sequence",
-            "displayName": "... Given",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "... When",
-            "children": [
-              {
-                "kind": "InvokeWorkflow",
-                "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
-                "targetPath": "GammaClient.xaml",
-                "arguments": [
-                  {
-                    "name": "in_Request",
-                    "kind": "argument"
-                  },
-                  {
-                    "name": "in_Config",
-                    "kind": "argument"
-                  },
-                  {
-                    "name": "in_CancellationToken",
-                    "kind": "argument"
-                  },
-                  {
-                    "name": "out_Response",
-                    "kind": "argument"
-                  },
-                  {
-                    "name": "out_Status",
-                    "value": "[out_Status]",
-                    "kind": "argument"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "... Then",
-            "children": []
-          }
-        ],
-        "annotations": [
-          {
-            "raw": "@test",
-            "name": "test",
-            "value": null,
-            "category": "classification",
-            "appliesTo": "workflow"
-          }
-        ]
-      },
+      "displayName": "TestCase_FakeGamma",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_LIBS_00000001\\project.json",
+      "relativePath": "TestCase_FakeGamma.xaml",
+      "isEntryPoint": false,
+      "parseStatus": "parsed",
+      "annotations": [],
       "arguments": [
         {
           "name": "in_TestInput",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "in_FakeBehavior",
           "direction": "In",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_ObservedOutput",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         },
         {
           "name": "out_Status",
           "direction": "Out",
-          "type": "System.String",
-          "required": false
+          "type": "x:String",
+          "annotations": []
         }
       ],
-      "annotations": [
-        {
-          "raw": "@test",
-          "name": "test",
-          "value": null,
-          "category": "classification",
-          "appliesTo": "workflow"
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
+      "root": {
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "TestCase_FakeGamma",
+        "attributes": {
+          "DisplayName": "TestCase_FakeGamma"
+        },
+        "annotations": [
+          {
+            "raw": "@test",
+            "tag": "test",
+            "category": "classification",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@test",
+              "tag": "test",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
+          }
+        ],
+        "children": [
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "... Given",
+            "attributes": {
+              "DisplayName": "... Given"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "... Given",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "... Given",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "... When",
+            "attributes": {
+              "DisplayName": "... When"
+            },
+            "annotations": [],
+            "children": [
+              {
+                "kind": "Activity",
+                "activityType": "InvokeWorkflowFile",
+                "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                "attributes": {
+                  "ArgumentsVariable": "{x:Null}",
+                  "DisplayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                  "UnSafe": "False",
+                  "WorkflowFileName": "GammaClient.xaml"
+                },
+                "annotations": [],
+                "children": [
+                  {
+                    "kind": "Activity",
+                    "activityType": "InvokeWorkflowFile.Arguments",
+                    "attributes": {},
+                    "annotations": [],
+                    "children": [],
+                    "invokeArguments": {},
+                    "arguments": [],
+                    "metadata": {
+                      "sourceTag": "InvokeWorkflowFile.Arguments"
+                    }
+                  }
+                ],
+                "invokeTarget": "GammaClient.xaml",
+                "invokeArguments": {},
+                "arguments": [
+                  {
+                    "name": "ArgumentsVariable",
+                    "value": "{x:Null}",
+                    "kind": "literal",
+                    "expression": {
+                      "kind": "Expression",
+                      "language": "VisualBasic",
+                      "text": "{x:Null}",
+                      "literal": true,
+                      "bindingKind": "literal"
+                    }
+                  },
+                  {
+                    "name": "DisplayName",
+                    "value": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                    "kind": "literal",
+                    "expression": {
+                      "kind": "Expression",
+                      "language": "VisualBasic",
+                      "text": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+                      "literal": true,
+                      "bindingKind": "literal"
+                    }
+                  },
+                  {
+                    "name": "UnSafe",
+                    "value": "False",
+                    "kind": "literal",
+                    "expression": {
+                      "kind": "Expression",
+                      "language": "VisualBasic",
+                      "text": "False",
+                      "literal": true,
+                      "bindingKind": "literal"
+                    }
+                  },
+                  {
+                    "name": "WorkflowFileName",
+                    "value": "GammaClient.xaml",
+                    "kind": "literal",
+                    "expression": {
+                      "kind": "Expression",
+                      "language": "VisualBasic",
+                      "text": "GammaClient.xaml",
+                      "literal": true,
+                      "bindingKind": "literal"
+                    }
+                  }
+                ],
+                "metadata": {
+                  "sourceTag": "InvokeWorkflowFile"
+                }
+              }
+            ],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "... When",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "... When",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "... Then",
+            "attributes": {
+              "DisplayName": "... Then"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "... Then",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "... Then",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          }
+        ],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "TestCase_FakeGamma",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "TestCase_FakeGamma",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
         }
-      ]
+      },
+      "invokes": [
+        {
+          "kind": "static",
+          "targetPath": "GammaClient.xaml",
+          "resolvedPath": "GammaClient.xaml",
+          "displayName": "GammaClient - Invoke Workflow File (GammaClient.xaml)",
+          "arguments": {},
+          "isResolved": true,
+          "isEntryPoint": true
+        }
+      ],
+      "metadata": {
+        "fileName": "TestCase_FakeGamma.xaml",
+        "relativePath": "TestCase_FakeGamma.xaml"
+      }
     }
-  ]
+  ],
+  "parseWarnings": [],
+  "parseErrors": [],
+  "raw": {
+    "name": "c26v001_LIBS_00000001",
+    "projectId": "63341674-eda6-4c9a-8dc9-dd79ab9c28a0",
+    "description": "rpax corpus library",
+    "main": "Main.xaml",
+    "dependencies": {
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]",
+      "UiPath.System.Activities": "[26.2.4]",
+      "UiPath.Testing.Activities": "[24.10.4]"
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "schemaVersion": "4.0",
+    "studioVersion": "26.0.190.0",
+    "projectVersion": "0.0.1",
+    "runtimeOptions": {
+      "autoDispose": false,
+      "netFrameworkLazyLoading": false,
+      "isPausable": true,
+      "isAttended": false,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "workflowSerialization": "DataContract",
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow",
+      "readyForPiP": false,
+      "startsInPiP": false,
+      "mustRestoreAllDependencies": false,
+      "pipType": "ChildSession"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Library",
+      "libraryOptions": {
+        "privateWorkflows": [
+          "GammaImpl.xaml"
+        ]
+      },
+      "processOptions": {
+        "ignoredFiles": []
+      },
+      "fileInfoCollection": [
+        {
+          "editingStatus": "InProgress",
+          "testCaseId": "26059bda-e9d9-407a-bb03-63ee04d0e223",
+          "testCaseType": "TestCase",
+          "executionTemplateInvokeIsolated": false,
+          "fileName": "TestCase_FakeGamma.xaml"
+        }
+      ],
+      "saveToCloud": false
+    },
+    "arguments": {
+      "input": [],
+      "output": []
+    },
+    "expressionLanguage": "VisualBasic",
+    "entryPoints": [
+      {
+        "filePath": "GammaClient.xaml",
+        "uniqueId": "ec9caf56-4057-4218-a2a0-d0e25bd81069",
+        "input": [],
+        "output": []
+      }
+    ],
+    "isTemplate": false,
+    "templateProjectData": {},
+    "publishData": {},
+    "targetFramework": "Windows"
+  },
+  "metadata": {
+    "runtimeOptions": {
+      "autoDispose": false,
+      "netFrameworkLazyLoading": false,
+      "isPausable": true,
+      "isAttended": false,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "workflowSerialization": "DataContract",
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow",
+      "readyForPiP": false,
+      "startsInPiP": false,
+      "mustRestoreAllDependencies": false,
+      "pipType": "ChildSession"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Library",
+      "libraryOptions": {
+        "privateWorkflows": [
+          "GammaImpl.xaml"
+        ]
+      },
+      "processOptions": {
+        "ignoredFiles": []
+      },
+      "fileInfoCollection": [
+        {
+          "editingStatus": "InProgress",
+          "testCaseId": "26059bda-e9d9-407a-bb03-63ee04d0e223",
+          "testCaseType": "TestCase",
+          "executionTemplateInvokeIsolated": false,
+          "fileName": "TestCase_FakeGamma.xaml"
+        }
+      ],
+      "saveToCloud": false
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "isTemplate": false,
+    "templateProjectData": {},
+    "publishData": {}
+  }
 }

@@ -1,163 +1,501 @@
 {
   "kind": "Project",
   "name": "CoreNocheck",
+  "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_CORE_00000007\\project.json",
+  "projectId": "1a2c5e4c-706b-4ae4-903f-980773ebccdb",
+  "description": "c26v001 CORE 00000007 — @nocheck on a @module workflow; exercises AnnotationReader.IsNoCheck",
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.190.0",
   "expressionLanguage": "VisualBasic",
+  "targetFramework": "Windows",
+  "projectVersion": "1.0.0",
+  "outputType": "Process",
+  "isTemplate": false,
+  "main": "Pipeline.xaml",
+  "dependencies": [
+    {
+      "name": "Cpmf.WorkflowAnalyzerRules",
+      "version": "0.1.13-alpha",
+      "rawVersion": "[0.1.13-alpha]"
+    },
+    {
+      "name": "UiPath.System.Activities",
+      "version": "26.2.4",
+      "rawVersion": "[26.2.4]"
+    }
+  ],
+  "projectArguments": [],
   "entryPoints": [
     {
       "filePath": "Pipeline.xaml",
-      "name": "Pipeline"
-    }
-  ],
-  "annotations": [
-    {
-      "raw": "@pipeline",
-      "name": "pipeline",
-      "value": null,
-      "category": "classification",
-      "appliesTo": "workflow"
-    },
-    {
-      "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-      "name": "domain-model",
-      "value": "CoreNocheck.Config.CodedConfig",
-      "category": "classification",
-      "appliesTo": "workflow"
+      "uniqueId": "a1b2c3d4-0007-0000-0000-000000000001",
+      "input": [],
+      "output": []
     }
   ],
   "workflows": [
     {
       "kind": "Workflow",
-      "path": "Pipeline.xaml",
-      "name": "Pipeline",
+      "path": "Module.xaml",
+      "name": "Module",
+      "displayName": "Module",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_CORE_00000007\\project.json",
+      "relativePath": "Module.xaml",
+      "isEntryPoint": false,
+      "parseStatus": "parsed",
+      "annotations": [],
+      "arguments": [],
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
       "root": {
-        "kind": "Sequence",
-        "displayName": "Pipeline",
-        "children": [
-          {
-            "kind": "Sequence",
-            "displayName": "Initialize",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Ingest",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Enrich",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Decide",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Execute",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Complete",
-            "children": []
-          },
-          {
-            "kind": "Sequence",
-            "displayName": "Finalize",
-            "children": []
-          }
-        ],
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "Module",
+        "attributes": {
+          "DisplayName": "Module"
+        },
         "annotations": [
           {
-            "raw": "@pipeline",
-            "name": "pipeline",
-            "value": null,
+            "raw": "@module",
+            "tag": "module",
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@module",
+              "tag": "module",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
           },
           {
-            "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-            "name": "domain-model",
-            "value": "CoreNocheck.Config.CodedConfig",
-            "category": "classification",
-            "appliesTo": "workflow"
+            "raw": "@nocheck",
+            "tag": "nocheck",
+            "category": "suppression",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@nocheck",
+              "tag": "nocheck",
+              "category": "suppression",
+              "appliesTo": "activity"
+            }
           }
-        ]
+        ],
+        "children": [],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "Module",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "Module",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
+        }
       },
+      "invokes": [],
+      "metadata": {
+        "fileName": "Module.xaml",
+        "relativePath": "Module.xaml"
+      }
+    },
+    {
+      "kind": "Workflow",
+      "path": "Pipeline.xaml",
+      "name": "Pipeline",
+      "displayName": "Pipeline",
+      "projectFile": "D:\\github.com\\rpapub\\rpax-corpuses\\c26v001_CORE_00000007\\project.json",
+      "relativePath": "Pipeline.xaml",
+      "isEntryPoint": true,
+      "parseStatus": "parsed",
+      "annotations": [],
       "arguments": [
         {
           "name": "in_TransactionItem",
           "direction": "In",
-          "type": "UiPath.Core.QueueItem",
-          "required": false
+          "type": "ui:QueueItem",
+          "annotations": []
         },
         {
           "name": "in_Config",
           "direction": "In",
-          "type": "CoreNocheck.Config.CodedConfig",
-          "required": false
+          "type": "cfg:CodedConfig",
+          "annotations": []
         }
       ],
-      "annotations": [
-        {
-          "raw": "@pipeline",
-          "name": "pipeline",
-          "value": null,
-          "category": "classification",
-          "appliesTo": "workflow"
-        },
-        {
-          "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
-          "name": "domain-model",
-          "value": "CoreNocheck.Config.CodedConfig",
-          "category": "classification",
-          "appliesTo": "workflow"
-        }
-      ]
-    },
-    {
-      "kind": "Workflow",
-      "path": "Module.xaml",
-      "name": "Module",
+      "variables": [],
+      "imports": {
+        "namespaces": [],
+        "assemblies": []
+      },
       "root": {
-        "kind": "Sequence",
-        "displayName": "Module",
-        "children": [],
+        "kind": "Activity",
+        "activityType": "Sequence",
+        "displayName": "Pipeline",
+        "attributes": {
+          "DisplayName": "Pipeline"
+        },
         "annotations": [
           {
-            "raw": "@module",
-            "name": "module",
-            "value": null,
+            "raw": "@pipeline",
+            "tag": "pipeline",
             "category": "classification",
-            "appliesTo": "workflow"
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@pipeline",
+              "tag": "pipeline",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
           },
           {
-            "raw": "@nocheck",
-            "name": "nocheck",
-            "value": null,
-            "category": "suppression",
-            "appliesTo": "workflow"
+            "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
+            "tag": "domain-model",
+            "value": "CoreNocheck.Config.CodedConfig",
+            "category": "classification",
+            "appliesTo": "activity",
+            "annotationBlock": {
+              "raw": "@domain-model: CoreNocheck.Config.CodedConfig",
+              "tag": "domain-model",
+              "value": "CoreNocheck.Config.CodedConfig",
+              "category": "classification",
+              "appliesTo": "activity"
+            }
           }
-        ]
-      },
-      "annotations": [
-        {
-          "raw": "@module",
-          "name": "module",
-          "value": null,
-          "category": "classification",
-          "appliesTo": "workflow"
-        },
-        {
-          "raw": "@nocheck",
-          "name": "nocheck",
-          "value": null,
-          "category": "suppression",
-          "appliesTo": "workflow"
+        ],
+        "children": [
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Initialize",
+            "attributes": {
+              "DisplayName": "Initialize"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Initialize",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Initialize",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Ingest",
+            "attributes": {
+              "DisplayName": "Ingest"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Ingest",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Ingest",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Enrich",
+            "attributes": {
+              "DisplayName": "Enrich"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Enrich",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Enrich",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Decide",
+            "attributes": {
+              "DisplayName": "Decide"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Decide",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Decide",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Execute",
+            "attributes": {
+              "DisplayName": "Execute"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Execute",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Execute",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Complete",
+            "attributes": {
+              "DisplayName": "Complete"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Complete",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Complete",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          },
+          {
+            "kind": "Activity",
+            "activityType": "Sequence",
+            "displayName": "Finalize",
+            "attributes": {
+              "DisplayName": "Finalize"
+            },
+            "annotations": [],
+            "children": [],
+            "invokeArguments": {},
+            "arguments": [
+              {
+                "name": "DisplayName",
+                "value": "Finalize",
+                "kind": "literal",
+                "expression": {
+                  "kind": "Expression",
+                  "language": "VisualBasic",
+                  "text": "Finalize",
+                  "literal": true,
+                  "bindingKind": "literal"
+                }
+              }
+            ],
+            "metadata": {
+              "sourceTag": "Sequence"
+            }
+          }
+        ],
+        "invokeArguments": {},
+        "arguments": [
+          {
+            "name": "DisplayName",
+            "value": "Pipeline",
+            "kind": "literal",
+            "expression": {
+              "kind": "Expression",
+              "language": "VisualBasic",
+              "text": "Pipeline",
+              "literal": true,
+              "bindingKind": "literal"
+            }
+          }
+        ],
+        "metadata": {
+          "sourceTag": "Sequence"
         }
-      ]
+      },
+      "invokes": [],
+      "metadata": {
+        "fileName": "Pipeline.xaml",
+        "relativePath": "Pipeline.xaml"
+      }
     }
-  ]
+  ],
+  "parseWarnings": [],
+  "parseErrors": [],
+  "raw": {
+    "name": "CoreNocheck",
+    "projectId": "1a2c5e4c-706b-4ae4-903f-980773ebccdb",
+    "description": "c26v001 CORE 00000007 — @nocheck on a @module workflow; exercises AnnotationReader.IsNoCheck",
+    "main": "Pipeline.xaml",
+    "dependencies": {
+      "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]",
+      "UiPath.System.Activities": "[26.2.4]"
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "schemaVersion": "4.0",
+    "studioVersion": "26.0.190.0",
+    "projectVersion": "1.0.0",
+    "runtimeOptions": {
+      "autoDispose": false,
+      "netFrameworkLazyLoading": false,
+      "isPausable": true,
+      "isAttended": false,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "workflowSerialization": "DataContract",
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow",
+      "readyForPiP": false,
+      "startsInPiP": false,
+      "mustRestoreAllDependencies": false,
+      "pipType": "ChildSession"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Process",
+      "libraryOptions": {
+        "privateWorkflows": []
+      },
+      "processOptions": {
+        "ignoredFiles": []
+      },
+      "fileInfoCollection": [],
+      "saveToCloud": false
+    },
+    "arguments": {
+      "input": [],
+      "output": []
+    },
+    "expressionLanguage": "VisualBasic",
+    "entryPoints": [
+      {
+        "filePath": "Pipeline.xaml",
+        "uniqueId": "a1b2c3d4-0007-0000-0000-000000000001",
+        "input": [],
+        "output": []
+      }
+    ],
+    "isTemplate": false,
+    "templateProjectData": {},
+    "publishData": {},
+    "targetFramework": "Windows"
+  },
+  "metadata": {
+    "runtimeOptions": {
+      "autoDispose": false,
+      "netFrameworkLazyLoading": false,
+      "isPausable": true,
+      "isAttended": false,
+      "requiresUserInteraction": true,
+      "supportsPersistence": false,
+      "workflowSerialization": "DataContract",
+      "excludedLoggedData": [
+        "Private:*",
+        "*password*"
+      ],
+      "executionType": "Workflow",
+      "readyForPiP": false,
+      "startsInPiP": false,
+      "mustRestoreAllDependencies": false,
+      "pipType": "ChildSession"
+    },
+    "designOptions": {
+      "projectProfile": "Developement",
+      "outputType": "Process",
+      "libraryOptions": {
+        "privateWorkflows": []
+      },
+      "processOptions": {
+        "ignoredFiles": []
+      },
+      "fileInfoCollection": [],
+      "saveToCloud": false
+    },
+    "webServices": [],
+    "entitiesStores": [],
+    "isTemplate": false,
+    "templateProjectData": {},
+    "publishData": {}
+  }
 }

@@ -1,0 +1,8 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# VIOL project: dedicated test for CPMF-FC002 with default parameters.
+# Structure: 1 pipeline + 1 module, no @unit workflows.
+# Triggers both ratio checks at default thresholds
+# (MinModulesPerPipeline=5, MinUnitsPerModule=1).
+expectedViolations:
+  - ruleId: CPMF-FC002
+    severity: Warning

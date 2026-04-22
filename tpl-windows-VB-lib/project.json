@@ -1,7 +1,8 @@
 {
-  "name": "ViolF003",
-  "description": "c26v001 VIOL F003 — CPMF-F003: @pipeline missing or invalid @domain-model annotation",
-  "main": "Pipeline.xaml",
+  "name": "RpaxCorpusLibrary",
+  "projectId": "5200195b-8419-434d-b02f-77d9fad1d838",
+  "description": "rpax corpus library",
+  "main": "Activity.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[26.2.4]",
     "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
@@ -24,7 +25,7 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -39,8 +40,8 @@
   "targetFramework": "Windows",
   "entryPoints": [
     {
-      "filePath": "Pipeline.xaml",
-      "uniqueId": "c5d6e7f8-a9b0-1234-cdef-567890123456",
+      "filePath": "Activity.xaml",
+      "uniqueId": "1d831064-bff5-407a-ab01-804e6ba7a36c",
       "input": [],
       "output": []
     }
