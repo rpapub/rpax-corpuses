@@ -6,6 +6,7 @@ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
 xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
 xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib"
+xmlns:ui="http://schemas.uipath.com/workflow/activities"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Request" Type="InArgument(x:String)" />
@@ -65,5 +66,23 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
       <AssemblyReference>System.Net.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="@public" DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1" />
+  <Sequence sap2010:Annotation.AnnotationText="@public" DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:LogMessage Level="Info" Message="[&quot;codedActivity: executing, request=&quot; &amp; in_Request]" sap2010:WorkflowViewState.IdRef="LogMessage_1" />
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_Response]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_Request]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_Status]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">success</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
 </Activity>
