@@ -24,8 +24,9 @@ testSets:
   # They contain a mix of violations; expected outcomes are defined in sidecar files.
   # ─────────────────────────────────────────────────────────────────────────────
 
-  - id: c25-core-0001
-    name: "c25v001_CORE_00000001 — minimal project, assorted violations"
+  - id: c25v001_CORE_00000001
+    name: "c25v001_CORE_00000001"
+    description: "minimal project, assorted violations"
     corpus: ./c25v001_CORE_00000001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -35,8 +36,9 @@ testSets:
     enabled: true
     tags: [cpmf, c25, smoke]
 
-  - id: c25-core-0010
-    name: "c25v001_CORE_00000010 — REFramework with flowcharts and variable naming issues"
+  - id: c25v001_CORE_00000010
+    name: "c25v001_CORE_00000010"
+    description: "REFramework with flowcharts and variable naming issues"
     corpus: ./c25v001_CORE_00000010
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -46,8 +48,9 @@ testSets:
     enabled: true
     tags: [cpmf, c25]
 
-  - id: c25-core-0011
-    name: "c25v001_CORE_00000011 — annotated modules and unit tests"
+  - id: c25v001_CORE_00000011
+    name: "c25v001_CORE_00000011"
+    description: "annotated modules and unit tests"
     corpus: ./c25v001_CORE_00000011
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -57,8 +60,9 @@ testSets:
     enabled: true
     tags: [cpmf, c25]
 
-  - id: c25-core-0012
-    name: "c25v001_CORE_00000012 — REFramework with named pipeline stages (Initialize → Finalize)"
+  - id: c25v001_CORE_00000012
+    name: "c25v001_CORE_00000012"
+    description: "REFramework with named pipeline stages (Initialize → Finalize)"
     corpus: ./c25v001_CORE_00000012
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -74,8 +78,9 @@ testSets:
   # All disabled until projects are created in the corpus repo.
   # ─────────────────────────────────────────────────────────────────────────────
 
-  - id: c26-core-0001
-    name: "c26v001_CORE_00000001 — minimal pipeline, all rules passing"
+  - id: c26v001_CORE_00000001
+    name: "MinimalPipeline"
+    description: "minimal pipeline, all rules passing"
     corpus: ./c26v001_CORE_00000001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -85,8 +90,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core, smoke]
 
-  - id: c26-core-0002
-    name: "c26v001_CORE_00000002 — module library with pipeline"
+  - id: c26v001_CORE_00000002
+    name: "ModuleLibrary"
+    description: "module library with pipeline"
     corpus: ./c26v001_CORE_00000002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -96,8 +102,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core]
 
-  - id: c26-core-0003
-    name: "c26v001_CORE_00000003 — pipeline with modules and unit tests"
+  - id: c26v001_CORE_00000003
+    name: "PipelineWithTests"
+    description: "pipeline with modules and unit tests"
     corpus: ./c26v001_CORE_00000003
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -107,8 +114,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core]
 
-  - id: c26-core-0004
-    name: "c26v001_CORE_00000004 — pipeline with domain model"
+  - id: c26v001_CORE_00000004
+    name: "PipelineWithDomainModel"
+    description: "pipeline with domain model"
     corpus: ./c26v001_CORE_00000004
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -118,8 +126,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core]
 
-  - id: c26-core-0005
-    name: "c26v001_CORE_00000005 — invoke chain with in-sync arguments"
+  - id: c26v001_CORE_00000005
+    name: "InvokeChain"
+    description: "invoke chain with in-sync arguments"
     corpus: ./c26v001_CORE_00000005
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -129,8 +138,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core]
 
-  - id: c26-core-0006
-    name: "c26v001_CORE_00000006 — @suppress:CPMF-L001 mutes log-bookends on a @module workflow"
+  - id: c26v001_CORE_00000006
+    name: "CoreSuppress"
+    description: "@suppress:CPMF-L001 mutes log-bookends on a @module workflow"
     corpus: ./c26v001_CORE_00000006
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -140,8 +150,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core, suppression]
 
-  - id: c26-core-0007
-    name: "c26v001_CORE_00000007 — @nocheck mutes all rules on a @module workflow"
+  - id: c26v001_CORE_00000007
+    name: "CoreNocheck"
+    description: "@nocheck mutes all rules on a @module workflow"
     corpus: ./c26v001_CORE_00000007
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -151,8 +162,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, core, suppression]
 
-  - id: c26-core-0008
-    name: "c26v001_CORE_00000008 — minimal C# expression language project"
+  - id: c26v001_CORE_00000008
+    name: "c26v001_CORE_00000008"
+    description: "minimal C# expression language project"
     corpus: ./c26v001_CORE_00000008
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -170,8 +182,9 @@ testSets:
   # ─────────────────────────────────────────────────────────────────────────────
 
   # L — Logging and Observability
-  - id: c26-viol-l001
-    name: "c26v001_VIOL_L001 — CPMF-L001: missing log message bookends"
+  - id: c26v001_VIOL_L001
+    name: "ViolL001"
+    description: "CPMF-L001: missing log message bookends"
     corpus: ./c26v001_VIOL_L001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -182,8 +195,9 @@ testSets:
     tags: [cpmf, c26, viol, L]
 
   # U — Workflow Structure
-  - id: c26-viol-u001
-    name: "c26v001_VIOL_U001 — CPMF-U001: @unit missing out_Status argument"
+  - id: c26v001_VIOL_U001
+    name: "ViolU001"
+    description: "CPMF-U001: @unit missing out_Status argument"
     corpus: ./c26v001_VIOL_U001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -193,8 +207,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, U]
 
-  - id: c26-viol-u002
-    name: "c26v001_VIOL_U002 — CPMF-U002: @module/@pipeline missing CodedConfig argument"
+  - id: c26v001_VIOL_U002
+    name: "ViolU002"
+    description: "CPMF-U002: @module/@pipeline missing CodedConfig argument"
     corpus: ./c26v001_VIOL_U002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -204,8 +219,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, U]
 
-  - id: c26-viol-u003
-    name: "c26v001_VIOL_U003 — CPMF-U003: Flowchart activity present"
+  - id: c26v001_VIOL_U003
+    name: "ViolU003"
+    description: "CPMF-U003: Flowchart activity present"
     corpus: ./c26v001_VIOL_U003
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -215,8 +231,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, U]
 
-  - id: c26-viol-u004
-    name: "c26v001_VIOL_U004 — CPMF-U004: stale InvokeWorkflowFile argument count"
+  - id: c26v001_VIOL_U004
+    name: "ViolU004"
+    description: "CPMF-U004: stale InvokeWorkflowFile argument count"
     corpus: ./c26v001_VIOL_U004
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -227,8 +244,9 @@ testSets:
     tags: [cpmf, c26, viol, U]
 
   # N — Naming and Intent
-  - id: c26-viol-n001
-    name: "c26v001_VIOL_N001 — CPMF-N001: variable names violate camelCase convention"
+  - id: c26v001_VIOL_N001
+    name: "ViolN001"
+    description: "CPMF-N001: variable names violate camelCase convention"
     corpus: ./c26v001_VIOL_N001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -238,8 +256,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, N]
 
-  - id: c26-viol-n002
-    name: "c26v001_VIOL_N002 — CPMF-N002: workflow filename not a valid .NET identifier"
+  - id: c26v001_VIOL_N002
+    name: "ViolN002"
+    description: "CPMF-N002: workflow filename not a valid .NET identifier"
     corpus: ./c26v001_VIOL_N002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -249,8 +268,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, N]
 
-  - id: c26-viol-n003
-    name: "c26v001_VIOL_N003 — CPMF-N003: project name fails .NET identifier check"
+  - id: c26v001_VIOL_N003
+    name: "violN003"
+    description: "CPMF-N003: project name fails .NET identifier check"
     corpus: ./c26v001_VIOL_N003
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -261,8 +281,9 @@ testSets:
     tags: [cpmf, c26, viol, N]
 
   # F — Processing Flow
-  - id: c26-viol-f001
-    name: "c26v001_VIOL_F001 — CPMF-F001: Assign directly to SpecificContent"
+  - id: c26v001_VIOL_F001
+    name: "ViolF001"
+    description: "CPMF-F001: Assign directly to SpecificContent"
     corpus: ./c26v001_VIOL_F001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -272,8 +293,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, F]
 
-  - id: c26-viol-f002
-    name: "c26v001_VIOL_F002 — CPMF-F002: @pipeline wrong stage order"
+  - id: c26v001_VIOL_F002
+    name: "ViolF002"
+    description: "CPMF-F002: @pipeline wrong stage order"
     corpus: ./c26v001_VIOL_F002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -283,8 +305,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, F]
 
-  - id: c26-viol-f003
-    name: "c26v001_VIOL_F003 — CPMF-F003: @pipeline missing or invalid @domain-model annotation"
+  - id: c26v001_VIOL_F003
+    name: "ViolF003"
+    description: "CPMF-F003: @pipeline missing or invalid @domain-model annotation"
     corpus: ./c26v001_VIOL_F003
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -294,8 +317,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, F]
 
-  - id: c26-viol-fc001
-    name: "c26v001_VIOL_FC001 — CPMF-FC001: no @pipeline workflow in project"
+  - id: c26v001_VIOL_FC001
+    name: "ViolFc001"
+    description: "CPMF-FC001: no @pipeline workflow in project"
     corpus: ./c26v001_VIOL_FC001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -305,8 +329,9 @@ testSets:
     enabled: true
     tags: [cpmf, c26, viol, F, counter]
 
-  - id: c26-viol-fc002
-    name: "c26v001_VIOL_FC002 — CPMF-FC002: workflow type ratio below default thresholds"
+  - id: c26v001_VIOL_FC002
+    name: "ViolFc002"
+    description: "CPMF-FC002: workflow type ratio below default thresholds"
     corpus: ./c26v001_VIOL_FC002
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
@@ -320,8 +345,9 @@ testSets:
   # c26v001 LIBS — library output type projects
   # ─────────────────────────────────────────────────────────────────────────────
 
-  - id: c26-libs-0001
-    name: "c26v001_LIBS_00000001 — Library outputType with public/private workflows and test case"
+  - id: c26v001_LIBS_00000001
+    name: "baselineLibrary"
+    description: "Library outputType with public/private workflows and test case"
     corpus: ./c26v001_LIBS_00000001
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
