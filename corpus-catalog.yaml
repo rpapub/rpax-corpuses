@@ -30,6 +30,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c25, smoke]
@@ -40,6 +41,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c25]
@@ -50,6 +52,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c25]
@@ -60,6 +63,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c25]
@@ -76,6 +80,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core, smoke]
@@ -86,6 +91,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core]
@@ -96,6 +102,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core]
@@ -106,6 +113,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core]
@@ -116,6 +124,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core]
@@ -126,6 +135,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core, suppression]
@@ -136,6 +146,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core, suppression]
@@ -146,6 +157,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: CSharp
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, core, csharp]
@@ -164,6 +176,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, L]
@@ -175,6 +188,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, U]
@@ -185,6 +199,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, U]
@@ -195,6 +210,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, U]
@@ -205,6 +221,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, U]
@@ -216,6 +233,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, N]
@@ -226,6 +244,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, N]
@@ -236,6 +255,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, N]
@@ -247,6 +267,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, F]
@@ -257,6 +278,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, F]
@@ -267,6 +289,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, F]
@@ -277,6 +300,7 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, F, counter]
@@ -287,6 +311,22 @@ testSets:
     rulePack: Cpmf.WorkflowAnalyzerRules
     uipathTarget: net8
     expressionLanguage: VisualBasic
+    outputType: Process
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26, viol, F, counter]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # c26v001 LIBS — library output type projects
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  - id: c26-libs-0001
+    name: "c26v001_LIBS_00000001 — Library outputType with public/private workflows and test case"
+    corpus: ./c26v001_LIBS_00000001
+    rulePack: Cpmf.WorkflowAnalyzerRules
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    outputType: Library
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, libs]
