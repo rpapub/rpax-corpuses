@@ -5,6 +5,7 @@
   "main": "Activity.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[26.2.4]",
+    "UiPath.CodedWorkflows": "[24.10.1]",
     "Cpmf.WorkflowAnalyzerRules": "[0.1.13-alpha]"
   },
   "webServices": [],
