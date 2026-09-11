@@ -3,7 +3,14 @@
 # Module.xaml has @module + @nocheck — missing in_Config (CPMF-U002) and no log
 # bookends (CPMF-L001) would both fire, but @nocheck suppresses every rule.
 # Exercises: AnnotationReader.IsNoCheck(), ScopedRule.FilteredInspect() Pass() path.
-expectedViolations:
-  - ruleId: CPMF-FC002
-    severity: Warning
-
+#
+# CPMF-FC002 used to be listed here and no longer fires. It is IProjectModel-scoped,
+# and ScopedRule.GetAnnotation now composes a project's annotation from every workflow
+# root, so the single @nocheck on Module.xaml silences project-scoped rules for the
+# WHOLE project. That reach is documented and deliberate, and it is what makes the
+# file's own opening line — "expects zero violations" — true.
+#
+# This expectation survived only because the analyzer was resolving a stale
+# WatchfulAnvil.Sdk from a local flat feed that predated the change; the harness now
+# purges the extracted copy each run, so the corpus asserts against what was packed.
+expectedViolations: []

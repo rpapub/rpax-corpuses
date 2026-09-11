@@ -269,7 +269,7 @@ testSets:
     tags: [cpmf, c26, viol, N]
 
   - id: c26v001_VIOL_N003
-    name: "violN003"
+    name: "ViolN003"
     description: "CPMF-N003: project name fails .NET identifier check"
     corpus: ./c26v001_VIOL_N003
     rulePack: Cpmf.WorkflowAnalyzerRules
@@ -384,3 +384,24 @@ testSets:
     expectedSource: sidecar
     enabled: true
     tags: [cpmf, c26v002, core]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Diagnostics — the @tap developer aid.
+  # The only test set that does not use Cpmf.WorkflowAnalyzerRules, and the reason
+  # the harness now honours the rulePack field per test set rather than assuming it.
+  # It needs its own policy too: the diagnostics rules are deliberately absent from
+  # the corpus policy, which governs what the production rules assert.
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  - id: c26v001_TAP_00000001
+    name: "TapTarget"
+    description: "@tap on one activity — CPMF-TAP-TGT-001 reports how to target it"
+    corpus: ./c26v001_TAP_00000001
+    rulePack: Cpmf.Tap
+    governance: tools/governance/tap-only.json
+    uipathTarget: net8
+    expressionLanguage: VisualBasic
+    outputType: Process
+    expectedSource: sidecar
+    enabled: true
+    tags: [cpmf, c26, tap, diagnostics]

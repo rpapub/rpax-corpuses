@@ -1,0 +1,19 @@
+# expected.yaml — sidecar for corpus test harness (issue #42)
+# TAP project: the diagnostics story, end to end.
+#
+# Unit.xaml carries @tap on exactly one Log Message. CPMF-TAP-TGT-001 answers "how do I
+# target this activity in a rule?" and reports at Info against that activity, so the
+# expectation is one Info violation and nothing else.
+#
+# What this actually guards: the rule ships in WatchfulAnvil.Sdk but registers from the
+# Cpmf.Tap pack, which is the unmerged arrangement the whole SDK extraction rests on. If
+# the SDK stops reaching the analyzer as a resolvable dependency, this test set reports
+# zero violations rather than an error — the same silent failure mode the SDK-in-feed
+# assertion and the extracted-package purge exist to prevent.
+#
+# The second Log Message is identical but unannotated. The harness compares violation
+# sets rather than counts, so it cannot tell one report from two — that the annotation
+# is what gates the rule is asserted in TapTargetRuleTests, not here.
+expectedViolations:
+  - ruleId: CPMF-TAP-TGT-001
+    severity: Info
